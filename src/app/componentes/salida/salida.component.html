@@ -1,0 +1,22 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Condición</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of obreroshijo, let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{x.nombre}}</td>
+      <td>{{x.apellido}}</td>
+      <td>{{x.edad}}</td>
+      <td> <p *ngIf="x.edad>=18; else contrario">{{x.nombre}} es mayor de edad</p><ng-template #contrario> {{x.nombre}} es menor de edad</ng-template></td>
+      
+
+    </tr>
+  </tbody>
+</table>
